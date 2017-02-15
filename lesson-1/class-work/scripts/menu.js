@@ -33,7 +33,7 @@ function generateMenu(list) {
     str += "</ul>";
     return str;
 }
-// Находим наш navMenuList и говорим компилятору что это тип HTMLElement (document.querySelector возвращает елемент) 
+// Находим наш navMenuList и говорим компилятору что это тип HTMLElement (document.querySelector возвращает елемент)
 var navMenuList = document.querySelector('.menu');
 // вызываем функцию для генирации нашего меню
 navMenuList.innerHTML = generateMenu(menuList);

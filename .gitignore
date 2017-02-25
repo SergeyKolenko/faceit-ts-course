@@ -9,3 +9,4 @@
 #System Files
 .DS_Store
 Thumbs.db
+/lesson-3/class-work/node_modules

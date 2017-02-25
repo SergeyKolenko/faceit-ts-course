@@ -1,0 +1,21 @@
+{
+  "description": "TS course tasks",
+  "main": "index.js",
+  "dependencies": {
+    "@types/whatwg-fetch": "0.0.33",
+    "ts-loader": "0.7.2",
+    "typescript": "1.7.5",
+    "webpack": "1.12.14",
+    "whatwg-fetch": "0.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack:bundle": "webpack --progress --color -w"
+  },
+  "author": "Artem Galas",
+  "license": "MIT",
+  "name": "class-work",
+  "version": "1.0.0",
+  "types": ["..node_module/@types/lodash"]
+}

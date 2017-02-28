@@ -2,9 +2,8 @@
   "description": "TS course tasks",
   "main": "index.js",
   "dependencies": {
-    "@types/whatwg-fetch": "0.0.33",
     "ts-loader": "0.7.2",
-    "typescript": "1.7.5",
+    "typescript": "^2.0.0",
     "webpack": "1.12.14",
     "whatwg-fetch": "0.10.1"
   },

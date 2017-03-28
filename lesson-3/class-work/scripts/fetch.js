@@ -4,6 +4,7 @@
 //  */
 //
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var FlickrApp = (function () {
     function FlickrApp(opt) {
         var element = opt.element, uri = opt.uri, queryMethod = opt.queryMethod, apiKey = opt.apiKey;

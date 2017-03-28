@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var fetch_1 = require("./fetch");
 var elem = document.querySelector('.flikr-box');
 var flickr = new fetch_1.FlickrApp({

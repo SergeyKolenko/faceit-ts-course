@@ -9,11 +9,16 @@
 // }
 //
 // console.log(getAverage(2,3,5));
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 /** Таже функция но с необязательным параметром */
 // function getAverage(a: number, b: number, c?: number) : string {
 //   if(typeof c === 'undefined') {
@@ -112,10 +117,11 @@ var FooBase = (function () {
 var FooChild = (function (_super) {
     __extends(FooChild, _super);
     function FooChild() {
-        _super.call(this);
-        this.x;
+        var _this = _super.call(this) || this;
+        _this.x;
         // this.y; // недоступно так как private свойство
-        this.z;
+        _this.z;
+        return _this;
     }
     return FooChild;
 }(FooBase));
@@ -124,11 +130,11 @@ var SomeClass = (function () {
     function SomeClass() {
         SomeClass.instance++;
     }
-    // static свойство или метод доступно только у конструктора данного класса
-    // использовать в любом методе класса также можно
-    SomeClass.instance = 0;
     return SomeClass;
 }());
+// static свойство или метод доступно только у конструктора данного класса
+// использовать в любом методе класса также можно
+SomeClass.instance = 0;
 var s1 = new SomeClass();
 var s2 = new SomeClass();
 var s3 = new SomeClass();

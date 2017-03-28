@@ -14,11 +14,11 @@ var MathLib = (function () {
     MathLib.prototype.areaOfCircle = function (r) {
         return Math.PI * Math.pow(r, 2);
     };
-    __decorate([
-        logMethod
-    ], MathLib.prototype, "areaOfCircle", null);
     return MathLib;
 }());
+__decorate([
+    logMethod
+], MathLib.prototype, "areaOfCircle", null);
 function logMethod(target, key, descriptor) {
     console.log(target);
     console.log(key);
@@ -27,7 +27,7 @@ function logMethod(target, key, descriptor) {
     descriptor.value = function () {
         var args = [];
         for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i - 0] = arguments[_i];
+            args[_i] = arguments[_i];
         }
         var b = args.map(function (a) { return JSON.stringify(a); }).join();
         var result = originDescriptor.apply(this, args);
@@ -46,11 +46,11 @@ var Account = (function () {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    __decorate([
-        logProperty
-    ], Account.prototype, "firstName", void 0);
     return Account;
 }());
+__decorate([
+    logProperty
+], Account.prototype, "firstName", void 0);
 function logProperty(target, key) {
     var _val = target[key];
     var getter = function () {
@@ -78,11 +78,11 @@ var Person = (function () {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    Person = __decorate([
-        logClass
-    ], Person);
     return Person;
 }());
+Person = __decorate([
+    logClass
+], Person);
 function logClass(target) {
     return function () {
         console.log("New instance of " + target.name);
@@ -102,12 +102,12 @@ var PersonAccount = (function () {
     PersonAccount.prototype.sayMessage = function (msg) {
         return this.firstName + " " + this.lastName + ": " + msg;
     };
-    __decorate([
-        readMetaData,
-        __param(0, logParametr)
-    ], PersonAccount.prototype, "sayMessage", null);
     return PersonAccount;
 }());
+__decorate([
+    readMetaData,
+    __param(0, logParametr)
+], PersonAccount.prototype, "sayMessage", null);
 function logParametr(target, key, index) {
     var metadataKey = "___Log_" + key + "_parameters";
     if (Array.isArray(target[metadataKey])) {
@@ -124,7 +124,7 @@ function readMetaData(target, key, descriptor) {
     descriptor.value = function () {
         var args = [];
         for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i - 0] = arguments[_i];
+            args[_i] = arguments[_i];
         }
         console.log(key + " arg[" + indices + "]: " + args[indices]);
         return originDescriptor.apply(this, args);

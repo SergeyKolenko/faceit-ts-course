@@ -11,7 +11,7 @@ var q = a[0], w = a[1], e = a[2], r = a[3];
 function rest() {
     var a = [];
     for (var _i = 0; _i < arguments.length; _i++) {
-        a[_i - 0] = arguments[_i];
+        a[_i] = arguments[_i];
     }
     console.log(a); //Будут Array из [1,2,3]
 }

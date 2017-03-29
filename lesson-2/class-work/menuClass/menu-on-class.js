@@ -34,4 +34,3 @@ var listOfMenu = [
         ]
     }
 ];
-//# sourceMappingURL=menu-on-class.js.map

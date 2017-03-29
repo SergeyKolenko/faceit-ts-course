@@ -199,4 +199,3 @@ console.log("Some class instance " + SomeClass.instance); // output 3;
 //
 // console.log(acc.getInfo());
 // console.log(acc.getName()); 
-//# sourceMappingURL=01.js.map
